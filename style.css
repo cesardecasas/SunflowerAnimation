@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* GLOBAL STYLES */
+body {
+    background: #333;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: block;
+}
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        delay 1s,
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange
+    }
+}
+
+section {
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+
+.container {
+    padding-top: 4%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    animation: 2s scale linear;
+}
+
+#box1 {
+    transform-origin: bottom right;
+    border-radius: 0px 100px 0px 100px;
+    background: linear-gradient(160deg, #FFFF00 0%, #CCCC00 100%);
+}
+
+#box2 {
+    transform-origin: bottom left;
+    border-radius: 100px 0px 100px 0px;
+    background: linear-gradient(220deg, #FFFF00 0%, #CCCC00 100%);
+}
+
+#box3 {
+    transform-origin: top right;
+    border-radius: 100px 0px 100px 0px;
+    background: linear-gradient(30deg, #FFFF00 0%, #CCCC00 100%);
+}
+
+#box4 {
+    transform-origin: top left;
+    border-radius: 0px 100px 0px 100px;
+    background: linear-gradient(320deg, #FFFF00 0%, #CCCC00 100%);
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #4D3300;
+    z-index: 100;
+    margin-top: -298px;
+}
+
+.line {
+    background: #0f9b0f;
+    margin-top: -130px;
+    width: 25px;
+    height: 310px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.pot {
+    background: #7a2828;
+    border-radius: 0px 0px 40px 40px;
+    width: 250px;
+    height: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@keyframes scale {
+    0% {
+        scale: 0.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
